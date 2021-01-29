@@ -5,9 +5,14 @@
 ##### Satsuma 
 Satsuma is a whole-genome synteny alignment program. It takes two genomes, computes alignments, and then keeps only the parts that are orthologous, i.e. following the conserved order and orientation of features, such as protein coding genes, non-coding genes, or neutral sequences. Satsuma does not require any pre-processing, such as repeat masking, since it will automatically detect ambiguous mappings.
 
+Notes on code: 
 ```
 /data/gpfs/home/kuckele/local/bin/satsuma-code/SatsumaSynteny -q /data/gpfs/assoc/denovo/kuckele/eois_genome/fasta/Eoli_chromosome_assembly.fa -t /data/gpfs/assoc/denovo/kuckele/eois_genome/fasta/Bomo_chromosome_assembly.fa -o xcorr_bmori_chromosomes -m 1 -ni 10 -n 30
 
+```
+
+```
+grep '^Bomo_Chr' blockdisplayview.txt | cut -f 1,2,3,5,6,7 > blockdisplay_simple.txt
 ```
 
 ##### Visualized with Circos
